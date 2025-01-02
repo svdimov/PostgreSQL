@@ -1,1 +1,1 @@
-print('stefan')
+print('stefan','dimov')
