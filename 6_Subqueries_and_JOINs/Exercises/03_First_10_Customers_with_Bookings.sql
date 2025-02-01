@@ -1,0 +1,11 @@
+SELECT
+    b.booking_id,
+    b.starts_at:: DATE,
+    b.apartment_id,
+    concat_ws(' ',c.first_name,c.last_name) AS customer_name
+
+FROM bookings AS b
+RIGHT JOIN customers AS c
+ON b.customer_id = c.customer_id
+ORDER BY customer_name
+LIMIT 10 ;
